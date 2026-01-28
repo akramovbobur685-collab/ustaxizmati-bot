@@ -16,7 +16,12 @@ from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.storage.memory import MemoryStorage
 
 # ----------------- SETTINGS -----------------
-TOKEN = "7849457113:AAGsuBHsCJ5HlA3PEuyOfpWt9Mh7t3-IB0A"  # tokenni o'zing qo'yasan
+import os
+
+TOKEN = os.getenv("7849457113:AAGsuBHsCJ5HlA3PEuyOfpWt9Mh7t3-IB0A")
+if not TOKEN:
+    raise RuntimeError("7849457113:AAGsuBHsCJ5HlA3PEuyOfpWt9Mh7t3-IB0A")
+
 BASE_DIR = Path(__file__).resolve().parent
 DB_PATH = BASE_DIR / "ustaxizmati.db"
 
@@ -739,3 +744,4 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
