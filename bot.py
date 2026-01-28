@@ -18,9 +18,10 @@ from aiogram.fsm.storage.memory import MemoryStorage
 # ----------------- SETTINGS -----------------
 import os
 
-TOKEN = os.getenv("7849457113:AAGsuBHsCJ5HlA3PEuyOfpWt9Mh7t3-IB0A")
+TOKEN = os.getenv("BOT_TOKEN")
+
 if not TOKEN:
-    raise RuntimeError("7849457113:AAGsuBHsCJ5HlA3PEuyOfpWt9Mh7t3-IB0A")
+    raise RuntimeError("BOT_TOKEN environment variable not set")
 
 BASE_DIR = Path(__file__).resolve().parent
 DB_PATH = BASE_DIR / "ustaxizmati.db"
@@ -744,4 +745,5 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
 
