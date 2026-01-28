@@ -1,2 +1,2 @@
-aiogram==3.*
-pyhton-dotenv
+aiogram==2.25.1
+python-dotenv
